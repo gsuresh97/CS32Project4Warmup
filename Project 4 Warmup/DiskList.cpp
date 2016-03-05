@@ -69,7 +69,7 @@ bool DiskList::push_front(const char *data){
         int first = 4;
         bf.write(first, 0);
 
-        if (!bf.write(size + 2*sizeof(int) + 4, 0 + 4))
+        if (!bf.write(0, 0 + 4))
             return false;
         if (!bf.write(size, sizeof(int) + 4))
             return false;
@@ -90,14 +90,14 @@ bool DiskList::push_front(const char *data){
                 offset = next;
             }
         } while(next != 0);*/
-        if (!bf.write(offset + size + 2*sizeof(int), offset))
+        if (!bf.write(first, offset))
             return false;
         if (!bf.write(size, offset + sizeof(int)))
             return false;
         if (!bf.write(data, size, offset + 2*sizeof(int)))
             return false;
-        int null = 0;
-        if (!bf.write(null, offset + 2*sizeof(int) + size))
+        first = offset;
+        if (!bf.write(first, 0))
             return false;
         return true;
     }
@@ -105,21 +105,22 @@ bool DiskList::push_front(const char *data){
 
 
 void DiskList::printAll(){
-    int offset = 0;
     int next;
-    bf.read(next, 0);
+    int first;
+    bf.read(first, 0);
+    next = first;
     while (next != 0) {
         //cout << next;
         int size;
-        bf.read(size, offset + sizeof(int));
+        bf.read(size, next + sizeof(int));
         char word[size + 1];
-        bf.read(word, size, offset + 2*sizeof(int));
+        bf.read(word, size, next + 2*sizeof(int));
         /*for (int i = 0; i < size; i++) {
             cout << (int)word[i] << endl;
         }*/
         cout << word << endl;
-        offset = next;
-        bf.read(next, offset);
+        //offset = next;
+        bf.read(next, next);
     }
     
 }
