@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		60A8F50E1C8A8F3200F45996 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60A8F50D1C8A8F3200F45996 /* main.cpp */; };
+		60A8F5171C8B52C400F45996 /* DiskList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60A8F5161C8B52C400F45996 /* DiskList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,8 @@
 		60A8F50A1C8A8F3200F45996 /* Project 4 Warmup */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project 4 Warmup"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A8F50D1C8A8F3200F45996 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		60A8F5141C8B524300F45996 /* BinaryFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryFile.h; sourceTree = "<group>"; };
+		60A8F5151C8B52AA00F45996 /* DiskList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiskList.h; sourceTree = "<group>"; };
+		60A8F5161C8B52C400F45996 /* DiskList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiskList.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 			children = (
 				60A8F50D1C8A8F3200F45996 /* main.cpp */,
 				60A8F5141C8B524300F45996 /* BinaryFile.h */,
+				60A8F5161C8B52C400F45996 /* DiskList.cpp */,
+				60A8F5151C8B52AA00F45996 /* DiskList.h */,
 			);
 			path = "Project 4 Warmup";
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A8F5171C8B52C400F45996 /* DiskList.cpp in Sources */,
 				60A8F50E1C8A8F3200F45996 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
