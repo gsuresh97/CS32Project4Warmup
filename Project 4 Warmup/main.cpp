@@ -12,5 +12,10 @@ int main(){
     DiskList d("list.txt");
     char word[] = "Hello";
     d.push_front(word);
+    d.push_front("World");
+    d.push_front("This");
+    d.push_front("is");
+    d.push_front("Gopi");
+    d.printAll();
     return 0;
 }

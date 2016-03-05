@@ -63,8 +63,8 @@
 			children = (
 				60A8F50D1C8A8F3200F45996 /* main.cpp */,
 				60A8F5141C8B524300F45996 /* BinaryFile.h */,
-				60A8F5161C8B52C400F45996 /* DiskList.cpp */,
 				60A8F5151C8B52AA00F45996 /* DiskList.h */,
+				60A8F5161C8B52C400F45996 /* DiskList.cpp */,
 			);
 			path = "Project 4 Warmup";
 			sourceTree = "<group>";
